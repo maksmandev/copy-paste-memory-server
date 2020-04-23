@@ -4,6 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { DBModule } from './db/db.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { TemplatesModule } from './templates/templates.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { AppService } from './app.service';
       isGlobal: true,
     }),
     DBModule,
+    TemplatesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
